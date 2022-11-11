@@ -1,0 +1,60 @@
+
+[
+  {
+    "title": "The Lord of the Rings",
+    "author": "J. R. R. Tolkien",
+    "year": 1954,
+    "pages": 1216,
+    "ISBN": "978-0544003415",
+    "price": 22.99,
+    "numberOfPages": 1216,
+    "published": true,
+    "summary": "Book of the dead",
+    "genre": "Fantasy",
+    "bookUrl":"https://www.amazon.com/Lord-Rings-1-J-R-Tolkien/dp/0544003415/ref=sr_1_1?ie=UTF8&qid=1480480004&sr=8-1&keywords=the+lord+of+the+rings",
+    "bookImage": "https://images-na.ssl-images-amazon.com/images/I/51jQZ9ZQFJL._SX331_BO1,204,203,200_.jpg"
+  },
+    {
+        "title": "The Hobbit",
+        "author": "J. R. R. Tolkien",
+        "year": 1937,
+        "pages": 310,
+        "ISBN": "978-0547928227",
+        "price": 15.99,
+        "numberOfPages": 310,
+        "published": true,
+        "summary": "Book of the dead",
+        "genre": "Fantasy",
+        "bookUrl":"https://www.amazon.com/Hobbit-J-R-R-Tolkien/dp/054792822X/ref=sr_1_1?ie=UTF8&qid=1480480004&sr=8-1&keywords=the+lord+of+the+rings",
+        "bookImage": "https://images-na.ssl-images-amazon.com/images/I/51jQZ9ZQFJL._SX331_BO1,204,203,200_.jpg"
+    },
+    {
+        "title": "The Silmarillion",
+        "author": "J. R. R. Tolkien",
+        "year": 1977,
+        "pages": 784,
+        "ISBN": "978-0547928227",
+        "price": 19.99,
+        "numberOfPages": 784,
+        "published": true,
+        "summary": "Book of the dead",
+        "genre": "Fantasy",
+        "bookUrl":"https://www.amazon.com/Silmarillion-J-R-R-Tolkien/dp/054792822X/ref=sr_1_1?ie=UTF8&qid=1480480004&sr=8-1&keywords=the+lord+of+the+rings",
+        "bookImage": "https://images-na.ssl-images-amazon.com/images/I/51jQZ9ZQFJL._SX331_BO1,204,203,200_.jpg"
+    },
+    {
+        "title": "The Fellowship of the Ring",
+        "author": "J. R. R. Tolkien",
+        "year": 1954,
+        "pages": 432,
+        "ISBN": "978-0547928227",
+        "price": 19.99,
+        "numberOfPages": 432,
+        "published": true,
+        "summary": "Book of the dead",
+        "genre": "Fantasy",
+        "bookUrl":"https://www.amazon.com/Fellowship-Ring-J-R-R-Tolkien/dp/054792822X/ref=sr_1_1?ie=UTF8&qid=1480480004&sr=8-1&keywords=the+lord+of+the+rings",
+        "bookImage": "https://images-na.ssl-images-amazon.com/images/I/51jQZ9ZQFJL._SX331_BO1,204,203,200_.jpg"
+    }
+ 
+]
