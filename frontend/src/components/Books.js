@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
 import Zoom from "react-reveal/Zoom";
+import moment from "moment";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredBooks, setFilteredBooks] = useState([]);
   const [showMore, setShowMore] = useState(4);
+  const [showLess, setShowLess] = useState(4);
+  // show less books
+  const HandleShowLess = () => {
+    setShowMore(showMore - 4);
+  };
 
   useEffect(() => {
     fetch("http://localhost:5678/api/books")
@@ -74,11 +80,19 @@ const Books = () => {
             <h3>Title: {book.title}</h3>
             <p>Author: {book.author}</p>
             <p>Genre: {book.genre}</p>
-            <p>{book.summary}</p>
+            <p>Summary: {book.summary}</p>
             <p>ISBN: {book.ISBN}</p>
+            <p>Published: {moment(book.createdAt).fromNow()}</p>
           </div>
         ))}
+
+        {filteredBooks.length === 0 && (
+          <div className="empty">
+            <h1>No books found</h1>
+          </div>
+        )}
       </div>
+      <div className="show-more-container">
       {showMore < filteredBooks.length && (
         <button
           id="show-button"
@@ -88,6 +102,19 @@ const Books = () => {
           Show more
         </button>
       )}
+      {showMore > 4 && (
+        <button
+          id="show-button"
+          className="show-less"
+          onClick={() => HandleShowLess(showLess)}
+          style={{
+            backgroundColor: "tomato",
+          }}
+        >
+          Show less
+        </button>
+        )}
+      </div>
     </>
   );
 };

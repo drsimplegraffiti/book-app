@@ -9,7 +9,6 @@ exports.createBook = async (req, res) => {
       title,
       numberOfPages,
       ISBN,
-      published,
       author,
       summary,
       price,
@@ -34,13 +33,12 @@ exports.createBook = async (req, res) => {
     if (bookExists) {
       return res.status(400).json({ message: "Book already exists" });
     }
+    const result = await cloudinary.uploader.upload(req.file.path);
 
-    const result = await cloudinary.uploader.upload(req.file?.path);
     const book = new Book({
       title,
       numberOfPages,
       ISBN,
-      published,
       author,
       summary,
       price,
@@ -51,8 +49,7 @@ exports.createBook = async (req, res) => {
     });
 
     await book.save();
-    console.log(book);
-    res.status(201).json({ message: "Book created successfully", book });
+    res.status(201).json(book);
   } catch (error) {
     console.log(error);
     return res.status(400).json({
@@ -96,16 +93,13 @@ exports.findAllBooks = async (req, res) => {
           { ISBN: { $regex: search, $options: "i" } },
           { bookImage: { $regex: search, $options: "i" } },
           { bookUrl: { $regex: search, $options: "i" } },
-          
         ],
       });
-      res.status(200).json( books);
+      res.status(200).json(books);
     } else {
       const books = await Book.find();
-      res.status(200).json(books)
+      res.status(200).json(books);
     }
-
-  
   } catch (error) {
     console.log(error);
     return res.status(500).json({
@@ -280,3 +274,27 @@ exports.bulkUploadBooks = async (req, res) => {
     });
   }
 };
+
+// stats
+exports.getStats = async (req, res) => {
+  try {
+    const stats = await Book.aggregate([
+      {
+        $group: {
+          _id: "$genre",
+          count: { $sum: 1 },
+        },
+      },
+    ]);
+    console.log(stats);
+    res.status(200).json(stats);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      status: "fail",
+      message: error,
+    });
+  }
+};
+
+

@@ -212,6 +212,20 @@ body {
   padding: 20px;
 }
 
+.show-more-container{
+  width: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+
 #show-button{
   width: 200px;
   height: 50px;
@@ -219,13 +233,14 @@ body {
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   align-items: center;
   justify-content: center;
   display: flex;
   margin: 10px auto;
+  margin-left: 20px;
 }
 
 
@@ -646,4 +661,262 @@ footer {
   color: teal;
   border: 1px solid teal;
 }
+
+
+/* stats */
+.stats-container{
+  width: 100%;
+  height: 15vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+}
+
+.stat{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* margin-top: 20px; */
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+
+/* Sign up */
+.auth-container{
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container-left{
+  width: 50%;
+  height: 100%;
+  background-color: teal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+
+.auth-container-right{
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.back-home i{
+  font-size: 50px;
+  color: teal;
+  margin-bottom: 20px;
+}
+
+
+.form-group{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-group label{
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+}
+
+.form-group input, select{
+  width: 400px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.form-group input:focus{
+  outline: none;
+  border: 1px solid teal;
+}
+
+.auth-container-right button{
+  width: 100%;
+  height: 50px;
+  background-color: teal;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.auth-container-right button:hover{
+  background-color: #fff;
+  color: teal;
+  border: 1px solid teal;
+}
+
+/* style password visibility */
+.password-toggle{
+  position: relative;
+  top: -34px;
+  right: -355px;
+  cursor: pointer;
+}
+
+
+
+/* Have an account */
+.have-an-account{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.have-an-account a{
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* empty container */
+.empty{
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.empty h1{
+  font-size: 80px;
+  color: teal;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Upload page */
+.upload-container{
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.upload-container svg{
+  font-size: 100px;
+  color: teal;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.back-home{
+ text-decoration: none;
+ color: #555;
+}
+
+.form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.form-container a{
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.form-group label{
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+}
+
+
+.form-group input:focus{
+  outline: none;
+  border: 1px solid teal;
+}
+
+.form-container button{
+  width: 100%;
+  height: 50px;
+  background-color: teal;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.form-group button:hover{
+  background-color: #fff;
+  color: teal;
+  border: 1px solid teal;
+}
+
 
