@@ -14,7 +14,7 @@ const Books = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5678/api/books")
+    fetch("https://booka-app-be.vercel.app/api/books")
       .then((res) => res.json())
       .then((data) => {
         setBooks(data);

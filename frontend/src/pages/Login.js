@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const res = await fetch("http://localhost:5678/api/users/login", {
+    const res = await fetch("https://booka-app-be.vercel.app/api/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

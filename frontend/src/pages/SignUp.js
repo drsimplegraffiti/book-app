@@ -14,13 +14,16 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const res = await fetch("http://localhost:5678/api/users/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password, name }),
-    });
+    const res = await fetch(
+      "https://booka-app-be.vercel.app/api/users/signup",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password, name }),
+      }
+    );
     const data = await res.json();
     if (!res.ok) {
       setError(data.message);

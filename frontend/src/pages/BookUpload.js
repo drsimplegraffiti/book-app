@@ -39,13 +39,16 @@ const BookUpload = () => {
       //   navigate("/login");
       // }
 
-      const response = await fetch("http://localhost:5678/api/books", {
-        method: "POST",
-        body: bookData,
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://booka-app-be.vercel.app/api/books",
+        {
+          method: "POST",
+          body: bookData,
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       const data = await response.json();
 
       if (!response.ok) {

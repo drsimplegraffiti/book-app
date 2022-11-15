@@ -4,7 +4,7 @@ const Stats = () => {
   //    get stats from the backend by book genre
   const [stats, setStats] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5678/api/books/aggregate/stats")
+    fetch("https://booka-app-be.vercel.app/api/books/aggregate/stats")
       .then((res) => res.json())
       .then((data) => {
         setStats(data);
