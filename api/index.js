@@ -21,6 +21,13 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.get("/", (req, res) => {
+  return res.status(200).json({
+    status: "success",
+    message: "Welcome to the Book API",
+  });
+});
+
 app.use("/api/books", bookRoutes);
 app.use("/api/users", userRoutes);
 
